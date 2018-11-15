@@ -21,7 +21,7 @@ app.use('/v1', route);
 
 // Launch the server on port 3000
 const server = app.listen(port, () => {
-  console.log(`Listening at http://${port}`);
+  console.log(`Listening at port:${port}`);
 });
 
 module.exports = app;
