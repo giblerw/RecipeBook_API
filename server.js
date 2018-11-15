@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import router from './router';
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/recipes');
+mongoose.connect('mongodb://heroku_pwvqrzrr:u5t8tf0squgpp99nraka9qpgtb@ds151602.mlab.com:51602/heroku_pwvqrzrr', {useNewUrlParser: true});
 
 // Initialize http server
 const app = express();
