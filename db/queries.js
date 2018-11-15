@@ -1,9 +1,9 @@
 const db = require('./connection')
 
-function getRecipes() {
-  return db('recipe')
+function getAllRecipes() {
+  return db.select('*').from('recipe');
 }
 
 module.exports = {
-  getRecipes,
+  getAllRecipes,
 }
