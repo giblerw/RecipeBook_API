@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000
 const app = express();
 
 const route = require('./routes/index');
-
+app.use(allowCrossDomain);
 app.use(cors());
 
 // Logger that outputs all requests into the console
