@@ -9,8 +9,16 @@ const port = process.env.PORT || 3000
 // Initialize http server
 const app = express();
 
+app.all('*', function(req, res, next) {
+     var origin = req.get('origin');
+     res.header('Access-Control-Allow-Origin', origin);
+     res.header("Access-Control-Allow-Headers", "X-Requested-With");
+     res.header('Access-Control-Allow-Headers', 'Content-Type');
+     next();
+});
+
 const route = require('./routes/index');
-app.use(allowCrossDomain);
+
 app.use(cors());
 
 // Logger that outputs all requests into the console
